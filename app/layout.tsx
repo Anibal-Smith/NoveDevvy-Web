@@ -1,22 +1,19 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+// app/layout.tsx
+//import './globals.css'; // Si tienes un archivo CSS global, créalo.
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'Plataforma Política - Perú',
-  description: 'Tu voz, tu voto, tu futuro',
-}
+export const metadata = {
+  title: 'Vota Libre',
+  description: 'Aplicación de registro y perfil de candidatos/ciudadanos.',
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="es">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
-  )
+  );
 }
